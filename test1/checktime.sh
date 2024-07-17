@@ -1,7 +1,6 @@
 #!/bin/bash
 
-echo "Enter time in hh:mm format (00:00-23:59):"
-read time
+read -p "Enter time in hh:mm format (00:00-23:59): " time
 
 hour=$(echo $time | sed 's/:.*//')
 minute=$(echo $time | sed 's/.*://')
@@ -21,7 +20,3 @@ then
 else
     echo "In Valid time"
 fi
-
-echo "----------------"
-echo $hour
-echo $minute
